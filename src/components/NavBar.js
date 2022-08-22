@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import CompLogo from "../data/Logo.png";
 
 const Container = styled.div`
-  padding: 25px;
-  margin: 0 10%;
+  padding: 5.75vh 9.75vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 const Left = styled.div`
   flex: 1;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 `;
-const Logo = styled.div`
-  font-size: 32px;
-  font-weight: 800;
-  color: white;
+const Logo = styled.img`
+  width: 50%;
 `;
 const Center = styled.div`
   flex: 1;
@@ -31,12 +30,14 @@ const Right = styled.div`
 `;
 const Button = styled.button`
   margin-left: auto;
+  margin-right: 13.07%;
+  width: 6vw;
   color: white;
-  border: 1px solid #80558c;
+  border: 1px solid #7623ad;
   border-radius: 7px;
   padding: 8px;
   font-weight: bold;
-  background-color: #80558c;
+  background-color: #7623ad;
   cursor: pointer;
 `;
 
@@ -44,9 +45,7 @@ const NavBar = () => {
   return (
     <Container>
       <Left>
-        <Logo>
-          Ref<span style={{ color: "#AF7AB3" }}>o</span>rmiqo
-        </Logo>
+        <Logo src={CompLogo} alt="Company_logo" />
       </Left>
       <Center>
         <Link href="">Home</Link>

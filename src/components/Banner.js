@@ -1,43 +1,61 @@
 import React from "react";
 import styled from "styled-components";
+import ofcStaff from "../data/pngTree.png";
 
 const Container = styled.div`
-  padding: 15px;
+  padding: 5.75vh 9.75vw;
   display: flex;
-  justify-content: center;
+  height: 71vh;
 `;
 const Left = styled.div`
   color: white;
   flex: 1;
-  padding: 8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 const Heading = styled.h1`
-  font-size: 54px;
+  margin-top: 20vh;
+  font-size: 2.5rem;
+  width: 100%;
 `;
 const Para = styled.p`
-  padding-left: 16px;
-  font-size: 18px;
+  font-size: 1rem;
+  width: 100%;
 `;
 const ButtonContainer = styled.div`
-  text-align: center;
+  margin-top: 10%;
+  width: 100%;
 `;
 const Button = styled.button`
-  margin-right: 5px;
+  margin-right: 2.5vw;
+  width: 12vw;
   color: white;
-  border: 1px solid #80558c;
+  border: 1px solid #7623ad;
   border-radius: 7px;
   padding: 8px;
-  font-weight: bold;
-  background-color: #80558c;
+  background-color: #7623ad;
   cursor: pointer;
 `;
 const Right = styled.div`
   color: white;
   flex: 1;
-  padding: 8%;
+  height: 100%;
+`;
+const ImgBack = styled.div`
+  margin-top: 12.5vh;
+  margin-left: 12.5vw;
+  height: 52.5vh;
+  width: 27vw;
+  position: relative;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 7px;
+  background-color: #212222;
+`;
+const Image = styled.img`
+  height: 119.25%;
+  width: 90%;
+  margin-left: 6.5%;
+  position: relative;
+  bottom: 10vh;
 `;
 
 const Banner = () => {
@@ -45,7 +63,7 @@ const Banner = () => {
     <Container>
       <Left>
         <Heading>
-          Ready to reforn <br /> your business?
+          Ready to reform <br /> your business?
         </Heading>
         <Para>
           A journey of Reformation, Revolution, and Reclamation.
@@ -59,7 +77,11 @@ const Banner = () => {
           </Button>
         </ButtonContainer>
       </Left>
-      <Right>Right Banner</Right>
+      <Right>
+        <ImgBack>
+          <Image src={ofcStaff} alt="An Image" />
+        </ImgBack>
+      </Right>
     </Container>
   );
 };
