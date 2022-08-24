@@ -41,9 +41,9 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const NavBar = () => {
+const NavBar = ({ bColor }) => {
   return (
-    <Container>
+    <Container style={bColor}>
       <Left>
         <Logo src={CompLogo} alt="Company_logo" />
       </Left>
