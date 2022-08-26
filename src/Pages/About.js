@@ -4,6 +4,14 @@ import ShortAbout from "components/ShortAbout";
 import React from "react";
 import styled from "styled-components";
 const Container = styled.div``;
+const Header = styled.h1`
+  text-align: center;
+  font-size: 2.75rem;
+  background: #2c2c2c;
+  color: white;
+  margin-top: 0;
+  padding: 5vh;
+`;
 const Wrapper = styled.div`
   display: flex;
   margin: 0 0 7.5vh 0;
@@ -19,6 +27,11 @@ const About = () => {
   return (
     <Container>
       <NavBar bColor={{ backgroundColor: "#2C2C2C" }} />
+      <Header>
+        About
+        <p style={{ fontSize: "16px" }}>About Reformiqo</p>
+      </Header>
+
       <ShortAbout />
       <Wrapper>
         <Left>
